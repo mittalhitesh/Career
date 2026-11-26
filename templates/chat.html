@@ -1,0 +1,294 @@
+{% extends "base.html" %}
+{% block title %}AI Advisor — Career Mitar{% endblock %}
+
+{% block content %}
+<div class="gm-layout">
+
+  <!-- ── Messages Area ────────────────────────────────────────────────────── -->
+  <div class="gm-messages" id="chatMessages">
+
+    <!-- Empty / welcome state (hidden once messages arrive) -->
+    {% if not history %}
+    <div class="gm-welcome" id="welcomeMsg">
+      <div class="gm-welcome-icon">
+        <i class="bi bi-mortarboard-fill"></i>
+      </div>
+      <h1 class="gm-welcome-heading">
+        {% if profile and profile.get('name') %}
+          Hello, {{ profile.get('name') }}
+        {% else %}
+          Hello there
+        {% endif %}
+      </h1>
+      <p class="gm-welcome-sub">How can Career Mitar help you today?</p>
+
+      <!-- Suggestion chips -->
+      <div class="gm-chips">
+        {% set chips = [
+          ("compass",           "Career matches for my profile"),
+          ("bar-chart",         "Analyze my skill gaps"),
+          ("map",               "Build my learning roadmap"),
+          ("file-earmark-text", "Resume tips for my field"),
+          ("mic",               "Prepare for interviews"),
+          ("lightbulb",         "Hottest emerging careers")
+        ] %}
+        {% for icon, label in chips %}
+        <button class="gm-chip" onclick="sendQuickPrompt('{{ label }}')">
+          <i class="bi bi-{{ icon }} me-2"></i>{{ label }}
+        </button>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Previous history -->
+    {% for msg in history %}
+    <div class="gm-msg {{ 'gm-msg--user' if msg.role == 'user' else 'gm-msg--bot' }}">
+      {% if msg.role == 'assistant' %}
+      <div class="gm-bot-icon"><i class="bi bi-mortarboard-fill"></i></div>
+      {% endif %}
+      <div class="gm-msg-body {{ 'gm-msg-body--user' if msg.role == 'user' else '' }}">
+        {{ msg.content | safe }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- ── Typing Indicator ──────────────────────────────────────────────────── -->
+  <div class="gm-typing d-none" id="typingIndicator">
+    <div class="gm-typing-inner">
+      <div class="gm-bot-icon sm"><i class="bi bi-mortarboard-fill"></i></div>
+      <div class="gm-dots">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Input Bar ─────────────────────────────────────────────────────────── -->
+  <div class="gm-input-area">
+    <div class="gm-input-box" id="chatInputBox">
+      <!-- Tool buttons row -->
+      <div class="gm-input-tools">
+        <button class="gm-tool-btn" data-bs-toggle="modal" data-bs-target="#resumeModal" title="Analyze Resume">
+          <i class="bi bi-file-earmark-arrow-up"></i>
+          <span>Resume</span>
+        </button>
+        <button class="gm-tool-btn" data-bs-toggle="modal" data-bs-target="#roadmapModal" title="Generate Roadmap">
+          <i class="bi bi-map"></i>
+          <span>Roadmap</span>
+        </button>
+        <button class="gm-tool-btn" data-bs-toggle="modal" data-bs-target="#interviewModal" title="Interview Prep">
+          <i class="bi bi-mic"></i>
+          <span>Interview</span>
+        </button>
+        <button class="gm-tool-btn" data-bs-toggle="modal" data-bs-target="#skillModal" title="Skill Assessment">
+          <i class="bi bi-bar-chart"></i>
+          <span>Skills</span>
+        </button>
+        <div class="gm-tool-divider"></div>
+        <button class="gm-tool-btn gm-tool-btn--danger" id="clearChatBtn" title="Clear conversation">
+          <i class="bi bi-trash"></i>
+          <span>Clear</span>
+        </button>
+        <div class="ms-auto d-flex align-items-center gap-2">
+          <span class="gm-model-pill" id="modelBadge">Loading…</span>
+        </div>
+      </div>
+      <!-- Textarea row -->
+      <div class="gm-input-row">
+        <textarea id="chatInput" class="gm-textarea" rows="1"
+                  placeholder="Ask Career Mitar anything…"
+                  maxlength="2000"></textarea>
+        <button class="gm-send-btn" id="sendBtn" disabled>
+          <i class="bi bi-arrow-up"></i>
+        </button>
+      </div>
+      <div class="gm-input-hint">
+        <kbd>Enter</kbd> to send &middot; <kbd>Shift+Enter</kbd> for new line
+      </div>
+    </div>
+  </div>
+
+</div><!-- /gm-layout -->
+
+<!-- ── Resume Modal ──────────────────────────────────────────────────────── -->
+<div class="modal fade" id="resumeModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content cm-modal">
+      <div class="modal-header border-0 pb-0">
+        <h5 class="modal-title fw-bold"><i class="bi bi-file-earmark-text me-2 text-warning"></i>Resume Analyzer</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs cm-tabs mb-3" id="resumeTabs">
+          <li class="nav-item">
+            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#uploadTab">
+              <i class="bi bi-upload me-1"></i>Upload File
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#pasteTab">
+              <i class="bi bi-clipboard me-1"></i>Paste Text
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="uploadTab">
+            <div class="cm-drop-zone" id="dropZone">
+              <!-- idle state -->
+              <div id="dropZoneIdle">
+                <i class="bi bi-cloud-arrow-up display-4 text-muted"></i>
+                <p class="mt-2 text-muted">Drop your resume here or <label for="resumeFile" class="text-accent" style="cursor:pointer">browse</label></p>
+                <small class="text-muted">Supports PDF, DOCX, TXT</small>
+              </div>
+              <!-- file-selected state (hidden until a file is chosen) -->
+              <div id="dropZoneReady" class="d-none">
+                <i class="bi bi-file-earmark-check display-4 text-success"></i>
+                <p class="mt-2 mb-0 fw-semibold text-success" id="fileName"></p>
+                <small class="text-muted" id="fileSize"></small>
+                <br>
+                <button type="button" class="btn btn-outline-secondary btn-sm mt-2" id="clearFileBtn">
+                  <i class="bi bi-x-circle me-1"></i>Remove / Change file
+                </button>
+              </div>
+              <input type="file" id="resumeFile" class="d-none" accept=".pdf,.docx,.txt" />
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pasteTab">
+            <textarea id="resumeText" class="form-control cm-input" rows="10"
+                      placeholder="Paste your resume content here…"></textarea>
+          </div>
+        </div>
+        <div id="resumeResult" class="mt-3 d-none">
+          <div class="cm-result-box" id="resumeResultContent"></div>
+        </div>
+      </div>
+      <div class="modal-footer border-0 pt-0">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-accent" id="analyzeResumeBtn">
+          <i class="bi bi-stars me-1"></i>Analyze with AI
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Roadmap Modal ─────────────────────────────────────────────────────── -->
+<div class="modal fade" id="roadmapModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content cm-modal">
+      <div class="modal-header border-0 pb-0">
+        <h5 class="modal-title fw-bold"><i class="bi bi-map me-2 text-info"></i>Learning Roadmap Generator</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-md-8">
+            <label class="form-label fw-medium">Target Role</label>
+            <input type="text" id="roadmapRole" class="form-control cm-input"
+                   placeholder="e.g., Data Scientist, Product Manager, UX Designer" />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label fw-medium">Timeline</label>
+            <select id="roadmapTimeline" class="form-select cm-input">
+              <option value="3 months">3 months</option>
+              <option value="6 months">6 months</option>
+              <option value="12 months" selected>12 months</option>
+              <option value="18 months">18 months</option>
+              <option value="2 years">2 years</option>
+            </select>
+          </div>
+        </div>
+        <div id="roadmapResult" class="mt-3 d-none">
+          <div class="cm-result-box" id="roadmapResultContent"></div>
+        </div>
+      </div>
+      <div class="modal-footer border-0 pt-0">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-accent" id="generateRoadmapBtn">
+          <i class="bi bi-map me-1"></i>Generate Roadmap
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Interview Modal ──────────────────────────────────────────────────── -->
+<div class="modal fade" id="interviewModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content cm-modal">
+      <div class="modal-header border-0 pb-0">
+        <h5 class="modal-title fw-bold"><i class="bi bi-mic me-2 text-purple"></i>Interview Preparation</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-md-7">
+            <label class="form-label fw-medium">Target Role</label>
+            <input type="text" id="interviewRole" class="form-control cm-input"
+                   placeholder="e.g., Software Engineer, Data Analyst" />
+          </div>
+          <div class="col-md-5">
+            <label class="form-label fw-medium">Interview Type</label>
+            <select id="interviewType" class="form-select cm-input">
+              <option value="behavioral">Behavioral (STAR)</option>
+              <option value="technical">Technical</option>
+              <option value="case study">Case Study</option>
+              <option value="mixed behavioral and technical">Mixed</option>
+            </select>
+          </div>
+        </div>
+        <div id="interviewResult" class="mt-3 d-none">
+          <div class="cm-result-box" id="interviewResultContent"></div>
+        </div>
+      </div>
+      <div class="modal-footer border-0 pt-0">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-accent" id="generateInterviewBtn">
+          <i class="bi bi-mic me-1"></i>Generate Prep Guide
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Skill Assessment Modal ───────────────────────────────────────────── -->
+<div class="modal fade" id="skillModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content cm-modal">
+      <div class="modal-header border-0 pb-0">
+        <h5 class="modal-title fw-bold"><i class="bi bi-bar-chart me-2 text-success"></i>Skill Gap Assessment</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-12">
+            <label class="form-label fw-medium">Your Current Skills</label>
+            <input type="text" id="currentSkills" class="form-control cm-input"
+                   placeholder="e.g., Python, Excel, communication, SQL"
+                   value="{{ profile.get('skills','') }}" />
+          </div>
+          <div class="col-12">
+            <label class="form-label fw-medium">Target Role</label>
+            <input type="text" id="targetRole" class="form-control cm-input"
+                   placeholder="e.g., Machine Learning Engineer, Product Manager" />
+          </div>
+        </div>
+        <div id="skillResult" class="mt-3 d-none">
+          <div class="cm-result-box" id="skillResultContent"></div>
+        </div>
+      </div>
+      <div class="modal-footer border-0 pt-0">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-accent" id="assessSkillBtn">
+          <i class="bi bi-bar-chart me-1"></i>Assess My Skills
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,113 @@
+.box {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface);
+  padding: var(--sp-4);
+}
+
+.corner {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1;
+  color: var(--muted);
+  user-select: none;
+  pointer-events: none;
+  background-color: var(--bg);
+  padding: 0 2px;
+}
+
+.tl {
+  top: -0.45em;
+  left: -0.35em;
+}
+
+.tr {
+  top: -0.45em;
+  right: -0.35em;
+}
+
+.bl {
+  bottom: -0.45em;
+  left: -0.35em;
+}
+
+.br {
+  bottom: -0.45em;
+  right: -0.35em;
+}
+
+.boxTitle {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: var(--sp-3);
+}
+
+.boxInner {
+  min-width: 0;
+}
+
+/* AsciiDivider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--muted);
+  margin: var(--sp-4) 0;
+  white-space: nowrap;
+}
+
+.dividerEdge {
+  flex-shrink: 0;
+}
+
+.dividerLabel {
+  flex-shrink: 0;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.dividerFill {
+  flex: 1;
+  height: 1px;
+  border-bottom: 1px dashed var(--line);
+  min-width: 1.5rem;
+}
+
+/* AsciiSpinner */
+.spinner {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.spinnerGlyph {
+  display: inline-block;
+  width: 1ch;
+  text-align: center;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* AsciiProgressBar */
+.progress {
+  display: inline-flex;
+  align-items: center;
+}
+
+.progressText {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}

@@ -1,0 +1,526 @@
+[
+  {
+    "slug": "software-engineer",
+    "title": "Software Engineer (SDE)",
+    "category": "Technology",
+    "salaryBand": "₹4.5 – ₹18 LPA (Fresher) · ₹18 – ₹45+ LPA (Mid/Senior)",
+    "timeline": "6–12 months of focused preparation",
+    "whoItSuits": "Students who enjoy building products, debugging logic, and continuous learning across frontend, backend, or full-stack systems.",
+    "coreSkills": ["Data Structures & Algorithms", "JavaScript / TypeScript or Python / Java", "SQL & Relational Databases", "Git, REST APIs & Testing", "System Design Basics"],
+    "entrySteps": [
+      "Master one language (JS/TS, Python, or Java) and build 2 deployed full-stack or backend projects.",
+      "Solve 120–150 curated DSA problems (Arrays, Maps, Trees, Graphs) with clean time/space explanations.",
+      "Apply for internships via Wellfound, LinkedIn, and campus placements before final-year graduation."
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1: Foundations (Weeks 1–8)",
+        "steps": [
+          { "id": "sde-1", "label": "Pick one primary language (JavaScript, Python, or Java) and master syntax & OOP" },
+          { "id": "sde-2", "label": "Learn Git, GitHub branching, and Linux/terminal basics" },
+          { "id": "sde-3", "label": "Build 3 small CLI or static web projects without tutorials" }
+        ]
+      },
+      {
+        "phase": "Phase 2: Core Engineering & DSA (Weeks 9–20)",
+        "steps": [
+          { "id": "sde-4", "label": "Practice Arrays, Strings, HashMaps, Two Pointers, and Recursion (80 problems)" },
+          { "id": "sde-5", "label": "Learn SQL (PostgreSQL) and build a REST API with authentication" },
+          { "id": "sde-6", "label": "Build and deploy 1 complete full-stack project with error handling" }
+        ]
+      },
+      {
+        "phase": "Phase 3: Interview & Job Readiness (Weeks 21–32)",
+        "steps": [
+          { "id": "sde-7", "label": "Cover Trees, Graphs, and basic Dynamic Programming (60 problems)" },
+          { "id": "sde-8", "label": "Write a 1-page ATS-friendly resume highlighting deployed project metrics" },
+          { "id": "sde-9", "label": "Do 5 mock technical + behavioral interviews and apply to 30+ targeted roles" }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "data-analyst",
+    "title": "Data Analyst",
+    "category": "Data & AI",
+    "salaryBand": "₹4.5 – ₹8.5 LPA (Fresher) · ₹10 – ₹18 LPA (Mid)",
+    "timeline": "4–6 months",
+    "whoItSuits": "Graduates from B.Tech, B.Com, B.Sc, or BBA who like spotting patterns in numbers and translating them into business decisions.",
+    "coreSkills": ["SQL (Joins, CTEs, Window Functions)", "Excel / Google Sheets", "Power BI or Tableau", "Python (Pandas, NumPy)", "Business Metrics & Storytelling"],
+    "entrySteps": [
+      "Become fluent in SQL queries and Excel pivot tables.",
+      "Build 2 India-contextual dashboards in Power BI (e.g., UPI transactions, quick-commerce retention).",
+      "Target GCCs, fintech, e-commerce, and analytics consultancies (Mu Sigma, Fractal, Tiger Analytics)."
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1: Spreadsheets & SQL (Weeks 1–6)",
+        "steps": [
+          { "id": "da-1", "label": "Master Excel formulas (XLOOKUP, INDEX-MATCH, Pivot Tables, data cleaning)" },
+          { "id": "da-2", "label": "Learn SQL SELECT, JOIN, GROUP BY, CTEs, and Window Functions" },
+          { "id": "da-3", "label": "Solve 50 SQL business case queries on LeetCode / StrataScratch" }
+        ]
+      },
+      {
+        "phase": "Phase 2: BI & Python (Weeks 7–14)",
+        "steps": [
+          { "id": "da-4", "label": "Build 2 interactive Power BI dashboards with DAX measures" },
+          { "id": "da-5", "label": "Learn Python Pandas for CSV cleaning and exploratory data analysis" },
+          { "id": "da-6", "label": "Learn basic statistics: mean/median, A/B testing, correlation vs causation" }
+        ]
+      },
+      {
+        "phase": "Phase 3: Portfolio & Outreach (Weeks 15–20)",
+        "steps": [
+          { "id": "da-7", "label": "Publish 2 case studies with clear business recommendations on GitHub/Notion" },
+          { "id": "da-8", "label": "Practice SQL live-coding and 'guesstimate' case questions" }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ai-ml-engineer",
+    "title": "AI / Machine Learning Engineer",
+    "category": "Data & AI",
+    "salaryBand": "₹6 – ₹15 LPA (Fresher) · ₹18 – ₹40+ LPA (Mid)",
+    "timeline": "8–12 months",
+    "whoItSuits": "Engineering/CS/Math students comfortable with Python, linear algebra, probability, and shipping ML/LLM pipelines into production.",
+    "coreSkills": ["Python & PyTorch / scikit-learn", "Statistics & Linear Algebra", "LLM APIs, RAG & Evaluations", "FastAPI & Docker", "Data Pipelines"],
+    "entrySteps": [
+      "Build strong Python + classical ML fundamentals before jumping straight to LLMs.",
+      "Ship an end-to-end project with an evaluation benchmark (e.g., RAG with retrieval metrics).",
+      "Contribute to open-source or publish reproducible notebooks on Hugging Face / GitHub."
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1: Math & Classical ML (Weeks 1–10)",
+        "steps": [
+          { "id": "ml-1", "label": "Refresh Linear Algebra, Calculus gradients, and Probability distributions" },
+          { "id": "ml-2", "label": "Master NumPy, Pandas, and scikit-learn (regression, trees, clustering)" },
+          { "id": "ml-3", "label": "Implement cross-validation and proper train/val/test hygiene" }
+        ]
+      },
+      {
+        "phase": "Phase 2: Deep Learning & LLMs (Weeks 11–22)",
+        "steps": [
+          { "id": "ml-4", "label": "Learn PyTorch tensors, autograd, and fine-tuning a small transformer" },
+          { "id": "ml-5", "label": "Build a Retrieval-Augmented Generation (RAG) app with vector search & evals" }
+        ]
+      },
+      {
+        "phase": "Phase 3: Production MLOps (Weeks 23–32)",
+        "steps": [
+          { "id": "ml-6", "label": "Wrap your model/pipeline in FastAPI + Docker and deploy a live demo" },
+          { "id": "ml-7", "label": "Prepare ML system design and debugging case studies" }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "product-manager",
+    "title": "Associate Product Manager (APM)",
+    "category": "Product & Design",
+    "salaryBand": "₹8 – ₹16 LPA (APM) · ₹20 – ₹40+ LPA (PM)",
+    "timeline": "6–9 months",
+    "whoItSuits": "Structured thinkers who enjoy user empathy, prioritizing trade-offs, writing crisp specs, and working across engineering and design.",
+    "coreSkills": ["Product Teardowns & PRDs", "SQL & Funnel Analytics", "User Research & Wireframing", "Prioritization Frameworks", "Stakeholder Communication"],
+    "entrySteps": [
+      "Write 3 product teardowns of Indian apps (e.g., Zepto, CRED, PhonePe, Zerodha).",
+      "Apply to APM programs (Flipkart, Razorpay, Swiggy, Zomato, Atlassian) or transition internally from QA/Dev/Analytics.",
+      "Build a small no-code or AI-assisted side product to show execution."
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1: Product Thinking (Weeks 1–8)",
+        "steps": [
+          { "id": "pm-1", "label": "Read foundational product case studies and learn user journey mapping" },
+          { "id": "pm-2", "label": "Write 3 structured Product Teardowns (problem, metrics, trade-offs)" }
+        ]
+      },
+      {
+        "phase": "Phase 2: Data & Execution (Weeks 9–16)",
+        "steps": [
+          { "id": "pm-3", "label": "Learn SQL basics and North Star / retention cohort metrics" },
+          { "id": "pm-4", "label": "Draft a complete PRD with Figma/wireframe sketches for a real feature" }
+        ]
+      },
+      {
+        "phase": "Phase 3: Case Prep & APM Applications (Weeks 17–24)",
+        "steps": [
+          { "id": "pm-5", "label": "Practice 15 product design, root-cause analysis (RCA), and guesstimate mocks" },
+          { "id": "pm-6", "label": "Ship a micro-product or campus initiative and document outcomes" }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ui-ux-designer",
+    "title": "UI / UX Designer",
+    "category": "Product & Design",
+    "salaryBand": "₹4 – ₹9 LPA (Fresher) · ₹12 – ₹24 LPA (Mid)",
+    "timeline": "5–8 months",
+    "whoItSuits": "Visual and empathetic problem-solvers who care about typography, usability, accessibility, and clean user flows.",
+    "coreSkills": ["Figma (Auto-layout, Components)", "User Research & Flows", "Typography & Visual Hierarchy", "Prototyping & Usability Testing", "Design Systems"],
+    "entrySteps": [
+      "Master Figma auto-layout and component variants.",
+      "Publish 2–3 deep UX case studies showing problem discovery, iterations, and before/after usability—not just pretty Dribbble shots.",
+      "Seek internships at design studios or early-stage SaaS startups."
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1: Visual & Figma Craft (Weeks 1–8)",
+        "steps": [
+          { "id": "ux-1", "label": "Learn typography, spacing grids, contrast accessibility, and color systems" },
+          { "id": "ux-2", "label": "Master Figma components, auto-layout, and interactive prototyping" }
+        ]
+      },
+      {
+        "phase": "Phase 2: UX Process & Case Studies (Weeks 9–18)",
+        "steps": [
+          { "id": "ux-3", "label": "Conduct 5 user interviews and map pain points for an everyday Indian app" },
+          { "id": "ux-4", "label": "Write 2 end-to-end UX case studies on Notion/Behance with clear rationale" }
+        ]
+      },
+      {
+        "phase": "Phase 3: Portfolio & Interviews (Weeks 19–24)",
+        "steps": [
+          { "id": "ux-5", "label": "Practice whiteboard design challenges and portfolio walkthroughs" },
+          { "id": "ux-6", "label": "Apply to product startups and agencies with tailored Loom walkthroughs" }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "cloud-devops-engineer",
+    "title": "Cloud & DevOps Engineer",
+    "category": "Technology",
+    "salaryBand": "₹5 – ₹11 LPA (Fresher) · ₹14 – ₹30 LPA (Mid)",
+    "timeline": "6–9 months",
+    "whoItSuits": "Engineers who enjoy Linux, networking, automation, CI/CD pipelines, and keeping production systems reliable.",
+    "coreSkills": ["Linux & Networking", "Docker & Kubernetes", "AWS / GCP / Azure", "Terraform (IaC)", "GitHub Actions / CI-CD & Monitoring"],
+    "entrySteps": [
+      "Get comfortable with Linux shell, DNS, HTTP, and SSH.",
+      "Containerize a multi-service app with Docker, deploy it on AWS/GCP free tier via Terraform + GitHub Actions.",
+      "Earn AWS Solutions Architect Associate or CKA (optional, pairs well with labs)."
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1: Linux & Networking (Weeks 1–8)",
+        "steps": [
+          { "id": "dev-1", "label": "Master Linux permissions, systemd, processes, and bash scripting" },
+          { "id": "dev-2", "label": "Understand TCP/IP, DNS, TLS/HTTPS, reverse proxies (Nginx)" }
+        ]
+      },
+      {
+        "phase": "Phase 2: Containers & Cloud (Weeks 9–18)",
+        "steps": [
+          { "id": "dev-3", "label": "Containerize a web app + database using Docker and Docker Compose" },
+          { "id": "dev-4", "label": "Deploy on AWS (EC2, VPC, IAM, S3, RDS) and automate with Terraform" }
+        ]
+      },
+      {
+        "phase": "Phase 3: CI/CD & Kubernetes (Weeks 19–28)",
+        "steps": [
+          { "id": "dev-5", "label": "Build a GitHub Actions CI/CD pipeline with automated tests" },
+          { "id": "dev-6", "label": "Learn Kubernetes pods, services, deployments, and Prometheus/Grafana basics" }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "cybersecurity-analyst",
+    "title": "Cybersecurity Analyst (SOC / AppSec)",
+    "category": "Technology",
+    "salaryBand": "₹4.5 – ₹9 LPA (Fresher) · ₹12 – ₹25 LPA (Mid)",
+    "timeline": "6–10 months",
+    "whoItSuits": "Detail-oriented learners fascinated by how networks and web apps break—and how to defend them.",
+    "coreSkills": ["Networking & TCP/IP", "OWASP Top 10 & Burp Suite", "Linux & Log Analysis (SIEM)", "Python / Bash Scripting", "Incident Response"],
+    "entrySteps": [
+      "Complete foundational rooms on TryHackMe or Hack The Box (Blue Team / Web).",
+      "Document vulnerability write-ups and home-lab SIEM setups on GitHub.",
+      "Target SOC Analyst L1 roles or Junior AppSec internships."
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1: Core IT & Security Basics (Weeks 1–8)",
+        "steps": [
+          { "id": "sec-1", "label": "Master networking ports, protocols, and packet analysis with Wireshark" },
+          { "id": "sec-2", "label": "Learn Linux administration and Windows Event Logs" }
+        ]
+      },
+      {
+        "phase": "Phase 2: Hands-on Labs (Weeks 9–20)",
+        "steps": [
+          { "id": "sec-3", "label": "Practice OWASP Top 10 labs (SQLi, XSS, IDOR) using PortSwigger Academy" },
+          { "id": "sec-4", "label": "Set up a home SIEM lab (Wazuh or Splunk) and write detection rules" }
+        ]
+      },
+      {
+        "phase": "Phase 3: Certifications & Roles (Weeks 21–28)",
+        "steps": [
+          { "id": "sec-5", "label": "Prepare for CompTIA Security+ or eJPT / BTL1 (optional)" },
+          { "id": "sec-6", "label": "Publish 5 clean lab write-ups and apply to MSSPs and GCC SOC teams" }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "chartered-accountant-finance",
+    "title": "Chartered Accountant / Corporate Finance",
+    "category": "Finance & Business",
+    "salaryBand": "₹7 – ₹12 LPA (Newly Qualified CA) · ₹15 – ₹30+ LPA (Mid)",
+    "timeline": "3.5–5 years (CA route) or 6–12 months (Finance Analyst)",
+    "whoItSuits": "Commerce and finance students with strong numerical discipline aiming for audit, taxation, FP&A, or investment banking.",
+    "coreSkills": ["Financial Accounting & Ind AS", "GST & Direct Taxation", "Financial Modeling in Excel", "Valuation & FP&A", "Audit & Compliance"],
+    "entrySteps": [
+      "Clear CA Foundation/Inter or pair B.Com with NISM/CFA Level 1 for non-CA finance roles.",
+      "Build a 3-statement financial model and DCF valuation in Excel for a listed Indian company.",
+      "Target Big 4 articleship/analyst roles or corporate FP&A teams."
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1: Accounting & Excel (Months 1–4)",
+        "steps": [
+          { "id": "fin-1", "label": "Master balance sheet, P&L, and cash flow statement linkages" },
+          { "id": "fin-2", "label": "Build keyboard-only Excel fluency and financial formulas" }
+        ]
+      },
+      {
+        "phase": "Phase 2: Modeling & Tax/Audit (Months 5–10)",
+        "steps": [
+          { "id": "fin-3", "label": "Build a 3-statement model + DCF for an NSE-listed company" },
+          { "id": "fin-4", "label": "Complete Articleship / finance internship with real client exposure" }
+        ]
+      },
+      {
+        "phase": "Phase 3: Specialization (Months 11+)",
+        "steps": [
+          { "id": "fin-5", "label": "Choose track: Statutory Audit, M&A/Valuation, FP&A, or Tax Advisory" },
+          { "id": "fin-6", "label": "Prepare technical finance + current Indian market case interviews" }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "management-consultant",
+    "title": "Management / Strategy Consultant",
+    "category": "Finance & Business",
+    "salaryBand": "₹8 – ₹16 LPA (Analyst) · ₹22 – ₹40+ LPA (Post-MBA)",
+    "timeline": "4–8 months of case & structured prep",
+    "whoItSuits": "Analytical communicators who enjoy solving ambiguous business problems across industries.",
+    "coreSkills": ["Case Structuring & MECE", "Guesstimates & Market Sizing", "Excel & Slide Storytelling", "Financial & Unit Economics", "Executive Presence"],
+    "entrySteps": [
+      "Practice 30+ consulting case interviews (profitability, market entry) with peers.",
+      "Build clean, insight-led slide decks summarizing an Indian industry sector.",
+      "Apply to MBB, Big 4 Strategy, Kearney, Alvarez & Marsal, or boutique firms."
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1: Structured Thinking (Weeks 1–6)",
+        "steps": [
+          { "id": "con-1", "label": "Learn MECE structuring, profitability trees, and market entry frameworks" },
+          { "id": "con-2", "label": "Solve 25 India-centric guesstimates out loud" }
+        ]
+      },
+      {
+        "phase": "Phase 2: Quant & Slides (Weeks 7–14)",
+        "steps": [
+          { "id": "con-3", "label": "Practice rapid mental math and unit economics calculations" },
+          { "id": "con-4", "label": "Create 2 crisp 5-slide strategy decks on Indian retail or EV sectors" }
+        ]
+      },
+      {
+        "phase": "Phase 3: Mock Interviews (Weeks 15–22)",
+        "steps": [
+          { "id": "con-5", "label": "Complete 20 live peer mock cases with feedback logs" },
+          { "id": "con-6", "label": "Refine PEI / leadership stories using the STAR format" }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "digital-marketing-growth",
+    "title": "Digital Marketing & Growth",
+    "category": "Marketing & Growth",
+    "salaryBand": "₹3.5 – ₹7 LPA (Fresher) · ₹9 – ₹18 LPA (Mid)",
+    "timeline": "3–5 months",
+    "whoItSuits": "Creative yet metrics-driven graduates who like copywriting, consumer psychology, performance ads, and SEO.",
+    "coreSkills": ["SEO & Content Strategy", "Meta & Google Ads", "Google Analytics (GA4)", "Conversion Rate Optimization", "Lifecycle / Email Marketing"],
+    "entrySteps": [
+      "Run a live micro-project (blog, Instagram page, or ₹2,000 test ad campaign) to show real metrics.",
+      "Learn GA4, Search Console, and basic Excel/Looker Studio reporting.",
+      "Apply to D2C brands, SaaS startups, or performance marketing agencies."
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1: Fundamentals (Weeks 1–6)",
+        "steps": [
+          { "id": "mkt-1", "label": "Learn customer funnels (CAC, LTV, ROAS, CTR, conversion rate)" },
+          { "id": "mkt-2", "label": "Master on-page/technical SEO and Google Search Console" }
+        ]
+      },
+      {
+        "phase": "Phase 2: Paid & Analytics (Weeks 7–14)",
+        "steps": [
+          { "id": "mkt-3", "label": "Learn Meta Ads Manager & Google Search Ads campaign structure" },
+          { "id": "mkt-4", "label": "Set up GA4 event tracking on a personal site or demo store" }
+        ]
+      },
+      {
+        "phase": "Phase 3: Proof of Work (Weeks 15–20)",
+        "steps": [
+          { "id": "mkt-5", "label": "Write a 2-page growth audit for an Indian D2C brand and pitch it" },
+          { "id": "mkt-6", "label": "Build a portfolio of ad copy, landing page teardowns, and campaign results" }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "biotech-clinical-research",
+    "title": "Biotech & Clinical Research",
+    "category": "Healthcare & Science",
+    "salaryBand": "₹3.5 – ₹7 LPA (Fresher) · ₹8 – ₹16 LPA (Mid)",
+    "timeline": "6–12 months",
+    "whoItSuits": "B.Sc / M.Sc / B.Pharm / B.Tech Biotech graduates interested in clinical trials, pharmacovigilance, or bioinformatics.",
+    "coreSkills": ["ICH-GCP Guidelines", "Clinical Data Management", "Pharmacovigilance", "Biostatistics / R or SAS", "Regulatory Documentation"],
+    "entrySteps": [
+      "Master ICH-GCP principles and clinical trial phases (Phase I–IV).",
+      "Learn basic biostatistics and clinical data tools (SAS/R or EDC systems).",
+      "Target CROs (IQVIA, Parexel, Syneos, ICON) and pharma hubs (Hyderabad, Bengaluru, Pune)."
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1: Clinical Foundations (Weeks 1–8)",
+        "steps": [
+          { "id": "bio-1", "label": "Study ICH-GCP guidelines, IRB/IEC ethics, and Clinical Trial Phases I–IV" },
+          { "id": "bio-2", "label": "Understand Pharmacovigilance (ICSR, MedDRA) and Regulatory Affairs" }
+        ]
+      },
+      {
+        "phase": "Phase 2: Data & Tools (Weeks 9–18)",
+        "steps": [
+          { "id": "bio-3", "label": "Learn Clinical Data Management (CRF design, query resolution)" },
+          { "id": "bio-4", "label": "Learn introductory SAS or R for clinical trial summary tables" }
+        ]
+      },
+      {
+        "phase": "Phase 3: CRO Applications (Weeks 19–26)",
+        "steps": [
+          { "id": "bio-5", "label": "Prepare for CRC / Junior CRA / PV Associate interviews" },
+          { "id": "bio-6", "label": "Apply to CROs and hospital clinical research departments" }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ev-embedded-systems",
+    "title": "EV & Embedded Systems Engineer",
+    "category": "Core Engineering",
+    "salaryBand": "₹4.5 – ₹9.5 LPA (Fresher) · ₹12 – ₹26 LPA (Mid)",
+    "timeline": "6–10 months",
+    "whoItSuits": "ECE, EEE, and Mechanical/Mechatronics students who want to work on hardware, firmware, BMS, or India's growing EV ecosystem.",
+    "coreSkills": ["Embedded C / C++", "Microcontrollers (STM32 / ESP32)", "CAN Bus, SPI, I2C, UART", "Battery Management Systems (BMS)", "PCB Design & Oscilloscope Debugging"],
+    "entrySteps": [
+      "Build real firmware projects on STM32 or ESP32 using bare-metal C (not just Arduino delays).",
+      "Understand CAN protocol and motor control / BMS fundamentals for EV roles.",
+      "Target EV OEMs (Ather, Ola Electric, TVS, Tata Elxsi) and semiconductor GCCs."
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1: Embedded C & Protocols (Weeks 1–10)",
+        "steps": [
+          { "id": "ev-1", "label": "Master pointers, bit manipulation, interrupts, and timers in Embedded C" },
+          { "id": "ev-2", "label": "Implement UART, I2C, and SPI drivers on STM32 or ESP32" }
+        ]
+      },
+      {
+        "phase": "Phase 2: RTOS & Automotive (Weeks 11–20)",
+        "steps": [
+          { "id": "ev-3", "label": "Build a multi-tasking firmware project using FreeRTOS" },
+          { "id": "ev-4", "label": "Study CAN Bus protocol and Li-ion Battery Management System (BMS) basics" }
+        ]
+      },
+      {
+        "phase": "Phase 3: Hardware Labs & Interviews (Weeks 21–28)",
+        "steps": [
+          { "id": "ev-5", "label": "Design a 2-layer PCB in KiCad and document oscilloscope testing" },
+          { "id": "ev-6", "label": "Practice C memory layout, volatile/static, and peripheral debugging Q&A" }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "upsc-civil-services",
+    "title": "Civil Services & Public Policy (UPSC / State PSC)",
+    "category": "Public Sector",
+    "salaryBand": "Pay Level 10+ (₹56,100 basic + allowances) · Policy: ₹6 – ₹14 LPA",
+    "timeline": "12–24 months (time-boxed attempts recommended)",
+    "whoItSuits": "Graduates committed to public administration, governance, and policy—with a disciplined multi-month study habit and a clear Plan B.",
+    "coreSkills": ["Polity, Economy & Geography", "Answer Writing & Synthesis", "Current Affairs Analysis", "CSAT Quantitative & Reading", "Public Policy Research"],
+    "entrySteps": [
+      "Read NCERTs (Class 6–12) and standard reference texts before chasing coaching notes.",
+      "Set a strict 1–2 attempt time-box and keep a parallel policy/analytics skill warm.",
+      "Explore public policy fellowships (LAMP, Gandhi Fellowship, State CM Fellowships) as strong parallel options."
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1: NCERTs & Syllabus Mapping (Months 1–4)",
+        "steps": [
+          { "id": "up-1", "label": "Analyze the last 5 years of Prelims & Mains Previous Year Questions (PYQs)" },
+          { "id": "up-2", "label": "Complete foundational NCERTs and 1 standard book per GS subject" }
+        ]
+      },
+      {
+        "phase": "Phase 2: Optional & Answer Writing (Months 5–10)",
+        "steps": [
+          { "id": "up-3", "label": "Complete Optional Subject Paper 1 & 2 with concise revision notes" },
+          { "id": "up-4", "label": "Write 2 timed Mains answers daily and review structure" }
+        ]
+      },
+      {
+        "phase": "Phase 3: Prelims Sprint & Plan B (Months 11–14)",
+        "steps": [
+          { "id": "up-5", "label": "Solve 30+ full-length Prelims & CSAT mock tests with error logs" },
+          { "id": "up-6", "label": "Apply to parallel public policy fellowships or research roles" }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "gate-mtech-psu",
+    "title": "GATE (M.Tech / PSU Track)",
+    "category": "Public Sector",
+    "salaryBand": "PSU: ₹10 – ₹18 LPA · Post-M.Tech (IIT/IISc): ₹14 – ₹30+ LPA",
+    "timeline": "8–12 months of core subject prep",
+    "whoItSuits": "Engineering students aiming for IIT/IISc M.Tech/MS research or stable core engineering roles in Maharatna PSUs.",
+    "coreSkills": ["Engineering Mathematics", "Core Branch Subjects", "General Aptitude", "Numerical Problem Solving", "Test-Taking Stamina"],
+    "entrySteps": [
+      "Target 70+ marks by focusing deeply on high-weightage core subjects + Engineering Math + Aptitude.",
+      "Solve the last 15 years of GATE PYQs topic-by-topic.",
+      "Keep placement skills lightly active so you have options regardless of rank."
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1: High-Weightage Core (Months 1–5)",
+        "steps": [
+          { "id": "gt-1", "label": "Master Engineering Mathematics and General Aptitude (28% of paper)" },
+          { "id": "gt-2", "label": "Complete top 4 highest-weightage core subjects with short formula notes" }
+        ]
+      },
+      {
+        "phase": "Phase 2: Remaining Subjects & PYQs (Months 6–9)",
+        "steps": [
+          { "id": "gt-3", "label": "Finish remaining core syllabus and solve 15 years of GATE PYQs" },
+          { "id": "gt-4", "label": "Maintain an error notebook for silly mistakes and conceptual gaps" }
+        ]
+      },
+      {
+        "phase": "Phase 3: Full-Length Mocks (Months 10–12)",
+        "steps": [
+          { "id": "gt-5", "label": "Take 20+ full 3-hour CBT mock tests using the virtual GATE calculator" },
+          { "id": "gt-6", "label": "Shortlist COAP / CCMT M.Tech programs and PSU notifications" }
+        ]
+      }
+    ]
+  }
+]

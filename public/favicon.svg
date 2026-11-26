@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="8" fill="#F6F3EC" stroke="#D9D4C7" stroke-width="2" />
+  <path d="M14 18V12H20M44 12H50V18M14 46V52H20M44 52H50V46" stroke="#2F6B4F" stroke-width="2.5" stroke-linecap="square" />
+  <text x="32" y="39" text-anchor="middle" font-family="monospace" font-size="22" font-weight="700" fill="#1B1B18">M_</text>
+</svg>

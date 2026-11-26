@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#F6F3EC" />
+  <rect x="48" y="48" width="1104" height="534" rx="4" fill="#FBF9F4" stroke="#D9D4C7" stroke-width="2" />
+  <path d="M72 96V72H96M1104 72H1128V96M72 534V558H96M1104 558H1128V534" stroke="#2F6B4F" stroke-width="3" />
+  <text x="110" y="160" font-family="monospace" font-size="24" fill="#2F6B4F" letter-spacing="2">CAREER MITAR AI · LOCAL-FIRST</text>
+  <text x="110" y="275" font-family="Georgia, serif" font-size="78" fill="#1B1B18">Calm, practical career</text>
+  <text x="110" y="365" font-family="Georgia, serif" font-size="78" fill="#1B1B18">guidance for Indian students.</text>
+  <text x="110" y="455" font-family="monospace" font-size="24" fill="#6B6A63">├── 14 Indian Career Tracks (INR Salary Bands)</text>
+  <text x="110" y="495" font-family="monospace" font-size="24" fill="#6B6A63">├── Interactive ASCII Roadmaps &amp; Progress Tracking</text>
+  <text x="110" y="535" font-family="monospace" font-size="24" fill="#6B6A63">└── Bring Your Own AI Key (Mock, OpenAI, Watsonx, Custom)</text>
+</svg>

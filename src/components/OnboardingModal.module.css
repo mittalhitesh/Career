@@ -1,0 +1,40 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-4);
+  background-color: rgba(18, 20, 17, 0.55);
+}
+
+.dialog {
+  width: 100%;
+  max-width: 520px;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  margin-bottom: var(--sp-2);
+}
+
+.sub {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  margin-bottom: var(--sp-4);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--sp-2);
+  margin-top: var(--sp-2);
+}

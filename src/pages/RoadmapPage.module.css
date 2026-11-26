@@ -1,0 +1,169 @@
+.page {
+  padding-top: var(--sp-6);
+  padding-bottom: var(--sp-8);
+}
+
+.topBar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+}
+
+@media (min-width: 760px) {
+  .topBar {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin: var(--sp-1) 0;
+}
+
+.metaLine {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.switcherWrap {
+  min-width: 260px;
+}
+
+.progressBox {
+  margin-bottom: var(--sp-4);
+}
+
+.progressRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+@media (min-width: 680px) {
+  .progressRow {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.progressLabel {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  margin-bottom: var(--sp-1);
+}
+
+.progressActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.tree {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: var(--sp-4);
+  overflow-x: auto;
+}
+
+.treeRoot {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: var(--sp-2);
+}
+
+.phaseBlock {
+  margin-bottom: var(--sp-2);
+}
+
+.phaseHeader {
+  display: flex;
+  align-items: baseline;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin-bottom: var(--sp-1);
+}
+
+.treeGlyph {
+  font-family: var(--font-mono);
+  color: var(--muted);
+  white-space: pre;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.phaseTitle {
+  color: var(--ink);
+}
+
+.stepList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stepRow {
+  display: flex;
+  align-items: flex-start;
+  min-height: 38px;
+}
+
+.stepLabel {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--sp-2);
+  padding: 4px 6px;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  transition: background-color var(--t-fast) var(--ease);
+}
+
+.stepLabel:hover {
+  background-color: var(--surface-elevated);
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.checkbox:focus-visible + .checkGlyph {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.checkGlyph {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.stepDone {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.footerNav {
+  margin-top: var(--sp-5);
+}

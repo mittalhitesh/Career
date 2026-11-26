@@ -1,0 +1,168 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  min-height: var(--header-height);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  text-decoration: none;
+  color: var(--ink);
+  min-height: 44px;
+  flex-shrink: 0;
+}
+
+.brandMark {
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.brandName {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+}
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: var(--sp-1);
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--sp-3);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: color var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease);
+}
+
+.navLink:hover {
+  color: var(--ink);
+  background-color: var(--surface-elevated);
+  opacity: 1;
+}
+
+.navLink.active {
+  color: var(--ink);
+  background-color: var(--surface-elevated);
+  border: 1px solid var(--line);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+}
+
+.statusBadge {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0 10px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink);
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.statusBadge:hover {
+  border-color: var(--muted);
+  opacity: 1;
+}
+
+.statusWarn {
+  border-color: var(--warn);
+  color: var(--warn);
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+
+.statusWarn .statusDot {
+  background-color: var(--warn);
+}
+
+.iconBtn {
+  min-width: 44px;
+  padding: 0;
+  font-size: 1.05rem;
+}
+
+.menuBtn {
+  min-width: 44px;
+  padding: 0;
+  font-size: 1.15rem;
+}
+
+.drawer {
+  border-top: 1px solid var(--line);
+  background-color: var(--surface);
+  padding: var(--sp-3) var(--sp-4);
+}
+
+.drawerNav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.drawerLink {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--sp-3);
+  color: var(--ink);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+}
+
+.drawerLink:hover,
+.drawerLink.active {
+  background-color: var(--surface-elevated);
+  opacity: 1;
+}
+
+@media (min-width: 820px) {
+  .nav {
+    display: flex;
+  }
+
+  .statusBadge {
+    display: inline-flex;
+  }
+
+  .menuBtn,
+  .drawer {
+    display: none;
+  }
+}
